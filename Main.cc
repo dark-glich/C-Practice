@@ -19,5 +19,11 @@ int main(){
     char Grade = 'A'; //character Variable
     bool isMale = true; //boolean Variable
 
+    /* Sub Strings */
+    string sentence = "Apple is red";
+    string sub;
+    sub = sentence.substr(9, 3); // string.substr(index, length)
+    cout << sub << endl;
+ 
     return 0;
 }
