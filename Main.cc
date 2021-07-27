@@ -10,6 +10,14 @@ int main(){
     characterAge = 40;
 
     cout << "There was a man named " << characterName << endl;
-    cout << "He was " << characterAge << " years old";
+    cout << "He was " << characterAge << " years old" << endl;
+
+    /* Data Types */
+    string Name = "Bilal"; // String Variable
+    int Age = 15; // Int Varible
+    double Marks = 94.6; //decimal Variable
+    char Grade = 'A'; //character Variable
+    bool isMale = true; //boolean Variable
+
     return 0;
 }
