@@ -1,4 +1,7 @@
 #include <iostream>
+// For Advanced Math calculations
+#include <cmath>
+
 using namespace std;
 
 int main(){
@@ -21,9 +24,15 @@ int main(){
 
     /* Sub Strings */
     string sentence = "Apple is red";
-    string sub;
-    sub = sentence.substr(9, 3); // string.substr(index, length)
+    string sub = sentence.substr(9, 3 ); // string.substr(index, length)
     cout << sub << endl;
+
+    /* Math Funnctions*/
+    int num = 10;
+    cout << pow(num, 2) << endl; // Does 10 raise to the power 2
+    cout << fmax(10, 12) << endl; // Gives the Max number
+    cout << ceil(10.4193) << endl; // Round up
+    cout << floor(2.983) << endl; // Round Down
  
     return 0;
 }
