@@ -43,5 +43,10 @@ int main()
     getline(cin, name); // getline is used to get user input in string of text
     cout << "Your name is" << name << endl;
 
+    /* Arrays */
+    int array[20] = {1,3,5,7,9}; // ArrayName[size] = {elements}
+    array[6] = 13;
+    cout << array[6] << endl;
+
     return 0;
 }
