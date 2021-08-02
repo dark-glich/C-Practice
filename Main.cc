@@ -4,6 +4,14 @@
 
 using namespace std;
 
+// Function Declaration
+void SayHello(string name, int age){
+    cout << "Hello, " << name << " you are " << age << " years old." << endl;
+};
+
+// Function Signature
+void GetAge(int age);
+
 int main()
 {
     // Declared and Assinged String Variable
@@ -48,5 +56,14 @@ int main()
     array[6] = 13;
     cout << array[6] << endl;
 
+    /* Functions */
+    SayHello("John", 20);
+    GetAge(12); // Function Call
+
+
     return 0;
+}
+
+void GetAge(int age){
+    cout << "Age : " << age << endl;
 }
