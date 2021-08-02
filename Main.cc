@@ -12,6 +12,11 @@ void SayHello(string name, int age){
 // Function Signature
 void GetAge(int age);
 
+// float function
+float Cube(float num){
+    return num * num * num;
+};
+
 int main()
 {
     // Declared and Assinged String Variable
@@ -59,6 +64,7 @@ int main()
     /* Functions */
     SayHello("John", 20);
     GetAge(12); // Function Call
+    cout << Cube(4.00); // Calling a float function
 
 
     return 0;
