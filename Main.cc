@@ -5,7 +5,8 @@
 using namespace std;
 
 // Function Declaration
-void SayHello(string name, int age){
+void SayHello(string name, int age)
+{
     cout << "Hello, " << name << " you are " << age << " years old." << endl;
 };
 
@@ -13,7 +14,8 @@ void SayHello(string name, int age){
 void GetAge(int age);
 
 // float function
-float Cube(float num){
+float Cube(float num)
+{
     return num * num * num;
 };
 
@@ -57,19 +59,33 @@ int main()
     cout << "Your name is" << name << endl;
 
     /* Arrays */
-    int array[20] = {1,3,5,7,9}; // ArrayName[size] = {elements}
+    int array[20] = {1, 3, 5, 7, 9}; // ArrayName[size] = {elements}
     array[6] = 13;
     cout << array[6] << endl;
 
     /* Functions */
     SayHello("John", 20);
-    GetAge(12); // Function Call
-    cout << Cube(4.00); // Calling a float function
+    GetAge(12);         // Function Call
+    cout << Cube(4.00) << endl; // Calling a float function
 
+    /* If Else Statements */
+    bool isFemale = true;
+    bool isTall = false;
+
+    if(isFemale && isTall){
+        cout << "You are a tall female" << endl;
+    }else if(!isTall){ // ! stands for not keyword
+        cout << "You are short" << endl; 
+    }else if(isTall || !isFemale){ 
+        cout << "You are either tall or nor not female" << endl;
+    }else{
+        cout << "NA";
+    }
 
     return 0;
 }
 
-void GetAge(int age){
+void GetAge(int age)
+{
     cout << "Age : " << age << endl;
 }
