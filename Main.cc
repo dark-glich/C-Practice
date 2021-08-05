@@ -82,6 +82,20 @@ int main()
         cout << "NA";
     }
 
+    /* While Loops */
+    int i = 6;
+
+    while(i <= 5){
+        cout << i << endl;
+        i++;
+    }
+    // Do while Loops : It first excutes the loop then checks the condition 
+    do{
+        cout << i << endl;
+        i++;
+    }while(i <= 5);
+    
+
     return 0;
 }
 
