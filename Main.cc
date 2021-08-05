@@ -1,6 +1,8 @@
 #include <iostream>
 // For Advanced Math calculations
 #include <cmath>
+// For advanced Array functions
+#include <array>
 
 using namespace std;
 
@@ -95,8 +97,15 @@ int main()
         i++;
     }while(i <= 5);
     
-
-    return 0;
+    /* For Loops */
+    for(int z = 0; z < 5; z++){ 
+        cout << z << endl;
+    }
+    /* Looping over a array */
+    int list[] = {1,3,5,7,9};
+    for(int a = 0; a < (sizeof(list)/sizeof(*list)); a++){
+        cout << list[a] << endl;
+    }
 }
 
 void GetAge(int age)
