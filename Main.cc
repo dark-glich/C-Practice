@@ -106,6 +106,18 @@ int main()
     for(int a = 0; a < (sizeof(list)/sizeof(*list)); a++){
         cout << list[a] << endl;
     }
+
+    /* 2 dimentional Arrays */
+    int array2d[2][2] = {{1,2},{3,4}};
+    cout << array2d[0][1] << endl;
+
+    // Nested For loops
+    for(int i = 0; i < 2; i++){
+        for(int j = 0; j < 2; j++){
+            cout << array2d[i][j];
+        }
+        cout << endl;
+    }
 }
 
 void GetAge(int age)
