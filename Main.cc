@@ -16,9 +16,16 @@ void SayHello(string name, int age)
 void GetAge(int age);
 
 // float function
-float Cube(float num)
-{
+float Cube(float num){
     return num * num * num;
+};
+
+// Student Class
+class Student{
+    public:
+        string name;
+        char grade;
+        int age;
 };
 
 int main()
@@ -128,6 +135,13 @@ int main()
     cout << *pointer << endl;
     // returns the memory address of the pointer
     cout << &pointer << endl;
+
+    // Student Class Instance
+    Student student1;
+    student1.name = "Mike";
+    student1.grade = 'A';
+    student1.age = 15;
+    cout << "Name - " << student1.name << ", Grade - " << student1.grade << ", Age - " << student1.age ;
 
 }
 
