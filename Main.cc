@@ -141,7 +141,7 @@ int main()
     student1.name = "Mike";
     student1.grade = 'A';
     student1.age = 15;
-    cout << "Name - " << student1.name << ", Grade - " << student1.grade << ", Age - " << student1.age ;
+    cout << "Name - " << student1.name << ", Grade - " << student1.grade << ", Age - " << student1.age << endl;
 
 }
 
