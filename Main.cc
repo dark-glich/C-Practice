@@ -22,7 +22,10 @@ float Cube(float num){
 
 // Student Class
 class Student{
-    public:
+    private:
+        string gender;
+
+    public: // All the code below public can be used outside this class 
         string name;
         char grade;
         int age;
@@ -38,6 +41,14 @@ class Student{
             name = Aname;
             grade = Agrade;
             age = Aage;
+        }
+
+        // Object Function
+        bool IsAdult(){
+            if(age >= 18){
+                return true;
+            }
+            return false;
         }
 };
 
@@ -153,6 +164,7 @@ int main()
     Student student1("mike", 'A', 14);
     Student student2;
     cout << "Name - " << student1.name << ", Grade - " << student1.grade << ", Age - " << student1.age << endl;
+    cout << student1.IsAdult() << endl;
 
 }
 
