@@ -22,28 +22,36 @@ float Cube(float num){
 
 // Student Class
 class Student{
-    private:
+    private: // All the code below private cannot be accessed outside this class 
         string gender;
 
-    public: // All the code below public can be used outside this class 
+    public: // All the code below public can be accessed outside this class 
         string name;
         char grade;
         int age;
 
         // Constructor : it is a special function which get executed when we create a instance
-        
-        Student(){ // Empty constructor
-            name = "NA";
-            grade = 'Z';
-            age = 0;
-        }
-        Student(string Aname, char Agrade, int Aage){
+        Student(string Aname, char Agrade, int Aage, string Agender){
             name = Aname;
             grade = Agrade;
             age = Aage;
+            setGender(Agender);
         }
 
-        // Object Function
+        // Object Functions 
+        void setGender(string Agender){
+            if(Agender == "male" || Agender == "female"){
+                gender = Agender;
+            }
+            else{
+                gender = "Not Available";
+            }
+        }
+
+        string getGender(){
+            return gender;
+        }
+
         bool IsAdult(){
             if(age >= 18){
                 return true;
@@ -161,8 +169,10 @@ int main()
     cout << &pointer << endl;
 
     // Student Class Instance
-    Student student1("mike", 'A', 14);
-    Student student2;
+    Student student1("mike", 'A', 14, "male");
+    student1.setGender("female");
+    cout << student1.getGender() << endl;
+
     cout << "Name - " << student1.name << ", Grade - " << student1.grade << ", Age - " << student1.age << endl;
     cout << student1.IsAdult() << endl;
 
