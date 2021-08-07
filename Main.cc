@@ -26,6 +26,19 @@ class Student{
         string name;
         char grade;
         int age;
+
+        // Constructor : it is a special function which get executed when we create a instance
+        
+        Student(){ // Empty constructor
+            name = "NA";
+            grade = 'Z';
+            age = 0;
+        }
+        Student(string Aname, char Agrade, int Aage){
+            name = Aname;
+            grade = Agrade;
+            age = Aage;
+        }
 };
 
 int main()
@@ -137,10 +150,8 @@ int main()
     cout << &pointer << endl;
 
     // Student Class Instance
-    Student student1;
-    student1.name = "Mike";
-    student1.grade = 'A';
-    student1.age = 15;
+    Student student1("mike", 'A', 14);
+    Student student2;
     cout << "Name - " << student1.name << ", Grade - " << student1.grade << ", Age - " << student1.age << endl;
 
 }
