@@ -158,16 +158,6 @@ int main()
         cout << endl;
     }
 
-    /* Pointers : it refers to a variable that holds the address of another variable */
-    string str = "abcd";
-    string *pointer = &str; // pointers are intialized with * in the starting
-    cout << pointer << endl; // returns a memory address
-
-    // returns the data stored in that memory address
-    cout << *pointer << endl;
-    // returns the memory address of the pointer
-    cout << &pointer << endl;
-
     // Student Class Instance
     Student student1("mike", 'A', 14, "male");
     student1.setGender("female");
