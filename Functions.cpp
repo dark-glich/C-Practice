@@ -20,7 +20,17 @@ void PrintArray(int Array[], int ArraySize){
     for(int x = 0; x < ArraySize; x++){
         cout << Array[x] << ", ";
     }
+    cout << endl;
 };
+
+// Creating a recursive Function
+int Factorial(int x){
+    if(x == 1){
+        return 1;
+    }else{
+        return x * Factorial(x-1); // Calling the function inside of that function
+    };
+} 
 
 int main(){
     int a = 10;
@@ -31,4 +41,5 @@ int main(){
     Cube(); // will take l,b,h as 1
     int array[3] =  {10,20,30};
     PrintArray(array, 3);
+    cout << Factorial(4) << endl;
 }
