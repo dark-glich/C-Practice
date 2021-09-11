@@ -32,6 +32,14 @@ class MathsBook: public Book{
         standard = Astandard;
         edition = Aedition;
     };
+    
+    // Function Overloading : Creating same fuction multiple times with different arguments
+    void print(std::string x){
+        std::cout << x << std::endl;
+    }
+    void print(int x){
+        std::cout << x << std::endl;
+    }
 };
 
 int main(){
