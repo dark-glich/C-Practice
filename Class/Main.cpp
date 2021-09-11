@@ -1,9 +1,11 @@
 #include <iostream>
 
 class Book{
-    public:
+    public: 
         std::string title;
         std::string author;
+        // Friend function : function specified outside a class but has the ability to access the class members 
+        friend void TotalEdition(Book book);
         double price;
         int pages;
 
@@ -21,6 +23,9 @@ class Book{
     }
 };
 
+void PerPagePrice(Book book) {
+   std::cout << "Price of each Page : " << book.price / book.pages << std::endl;
+}
 // Inheritence : A derived class can access all the non-private members of its base class
 class MathsBook: public Book{
     public:
@@ -32,7 +37,7 @@ class MathsBook: public Book{
         standard = Astandard;
         edition = Aedition;
     };
-    
+
     // Function Overloading : Creating same fuction multiple times with different arguments
     void print(std::string x){
         std::cout << x << std::endl;
@@ -44,6 +49,7 @@ class MathsBook: public Book{
 
 int main(){
     Book book1("Harry Potter", "JK Rowling", 199.89, 350);
+    PerPagePrice(book1);
     MathsBook book2("Basic Maths", "RD Sharama", 350.00, 630, 10, 5);
     return 0;
 }
