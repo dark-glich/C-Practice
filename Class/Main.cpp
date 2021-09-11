@@ -2,6 +2,8 @@
 
 class Book{
     public: 
+        // Static Member : A static member is shared by all objects of the class;
+        static int BookCount;
         std::string title;
         std::string author;
         // Friend function : function specified outside a class but has the ability to access the class members 
@@ -15,6 +17,7 @@ class Book{
         author = Aauthor;
         price = Aprice;
         pages = Apages;
+        BookCount ++;
     };
 
     // Destructor : it is a function that get executed when work of object is complete
@@ -22,6 +25,9 @@ class Book{
         std::cout << "Object is Deleted" << std::endl;
     }
 };
+
+// Initialize static member of Book class 
+int Book::BookCount = 0;
 
 void PerPagePrice(Book book) {
    std::cout << "Price of each Page : " << book.price / book.pages << std::endl;
@@ -51,5 +57,6 @@ int main(){
     Book book1("Harry Potter", "JK Rowling", 199.89, 350);
     PerPagePrice(book1);
     MathsBook book2("Basic Maths", "RD Sharama", 350.00, 630, 10, 5);
+    std::cout << "Total Book: " << Book::BookCount << std::endl;
     return 0;
 }
