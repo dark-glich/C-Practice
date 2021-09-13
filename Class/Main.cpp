@@ -13,7 +13,7 @@ class Book{
 
         // Polymorphism : the same entity (function or object) behaves differently in different scenarios
         virtual void GetInfo() {
-        std::cout << this->title << " - " << this->author << std::endl;
+        std::cout << this->title << " - " << this->author << "\n";
         }
 
     // Constructor : it is a function that get executed when object is created
