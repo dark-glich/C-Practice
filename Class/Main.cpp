@@ -11,6 +11,11 @@ class Book{
         double price;
         int pages;
 
+        // Polymorphism : the same entity (function or object) behaves differently in different scenarios
+        virtual void GetInfo() {
+        std::cout << this->title << " - " << this->author << std::endl;
+        }
+
     // Constructor : it is a function that get executed when object is created
     Book(std::string Atitile, std::string Aauthor, double Aprice, int Apages){
         title = Atitile;
@@ -24,6 +29,7 @@ class Book{
     ~Book(){
         std::cout << "Object is Deleted" << std::endl;
     }
+    
 };
 
 // Initialize static member of Book class 
@@ -37,6 +43,11 @@ class MathsBook: public Book{
     public:
         int standard;
         char edition;
+
+        // when GerInfo will be called the parent function would run
+        void GetInfo() {
+        std::cout << this->title << " - " << this->author << " - " << this->pages << std::endl;
+        }
 
     // Derived class Constructor
     MathsBook(std::string Atitile, std::string Aauthor, double Aprice, int Apages, int Astandard, char Aedition):Book(Atitile, Aauthor, Aprice, Apages){
@@ -58,5 +69,6 @@ int main(){
     PerPagePrice(book1);
     MathsBook book2("Basic Maths", "RD Sharama", 350.00, 630, 10, 5);
     std::cout << "Total Book: " << Book::BookCount << std::endl;
+    book1.GetInfo();
     return 0;
 }
